@@ -36,15 +36,15 @@
 
     const newEntry = `First Name: ${fname}\nLast Name: ${lname}\nCollege: ${cname}\nDate: ${date}\nSubmitted: ${new Date().toISOString()}\n\n`;
 
-    const username = 'Gowthamprasanna2002';
-    const repo = 'HTML';
-    const path = 'data.txt';
-    const token = 'ghp_yourActualTokenHere'; // 🔁 Replace this with your real token
+    const username = 'Gowthamprasanna2002';           // ✅ Your GitHub username
+    const repo = 'HTML-project';                      // ✅ Your GitHub repo name
+    const path = 'data.txt';                          // ✅ File inside the repo
+    const token = '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';  // ⚠️ Replace with valid token
 
-    const apiUrl = `https://api.github.com/repos/${Gowthamprasanna2002}/${HTML}/contents/${data.txt}`;
+    const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
 
     try {
-      // Step 1: Get current content & SHA
+      // Step 1: Get current content and SHA
       const res = await fetch(apiUrl, {
         headers: {
           Authorization: `token ${token}`,
